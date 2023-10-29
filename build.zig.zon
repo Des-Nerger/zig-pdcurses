@@ -1,0 +1,15 @@
+.{
+    .name = "pdcurses",
+    .version = "0.0.1",
+    .paths = .{
+        "src",
+    },
+    .dependencies = .{
+        // this is the name you want to use in the build.zig to reference this dependency
+        // note that we didn't have to call this libduckdb or even duckdb
+        .pdcurses_git = .{
+            .url = "https://github.com/wmcbrine/PDCurses/archive/refs/tags/3.9.tar.gz",
+            .hash = "1220f23c70ebd7e432c66e7820915938fd7ea40d2fbaa866109b8c0ba1bbdfc50059",
+        },
+    },
+}
