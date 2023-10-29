@@ -1,9 +1,7 @@
 .{
     .name = "pdcurses",
     .version = "3.9.0",
-    .paths = .{
-        "src",
-    },
+    .paths = .{""},
     .dependencies = .{
         .pdcurses_git = .{
             .url = "https://github.com/wmcbrine/PDCurses/archive/refs/tags/3.9.tar.gz",
