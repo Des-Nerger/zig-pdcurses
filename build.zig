@@ -21,9 +21,8 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
     const pdcurses = b.dependency("pdcurses_git", .{});
-
     lib.addCSourceFiles(.{
-        .dependency = pdcurses,
+        .root = pdcurses.path(""),
         .files = &[_][]const u8{
             "pdcurses/addch.c",
             "pdcurses/addchstr.c",
