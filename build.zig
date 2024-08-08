@@ -79,7 +79,7 @@ pub fn build(b: *std.Build) void {
     lib.addIncludePath(pdcurses.path("common"));
     lib.addIncludePath(pdcurses.path("pdcurses"));
     lib.linkLibC();
-    lib.installHeader(pdcurses.path("curses.h").getPath(b), "curses.h");
+    lib.installHeader(pdcurses.path("curses.h"), "curses.h");
     // This declares intent for the library to be installed into the standard
     // location when the user invokes the "install" step (the default step when
     // running `zig build`).
