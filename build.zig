@@ -72,7 +72,8 @@ pub fn build(b: *std.Build) void {
             "wincon/pdcsetsc.c",
             "wincon/pdcutil.c",
         },
-        .flags = &[_][]const u8{"-Wno-date-time"}, // otherwise build stops due to warning about __DATE__ usage, which i can't do anything about
+        .flags = &[_][]const u8{ "-Wno-date-time", "-DPDC_WIDE" },
+        // otherwise build stops due to warning about __DATE__ usage, which i can't do anything about
     });
 
     lib.addIncludePath(pdcurses.path(""));
